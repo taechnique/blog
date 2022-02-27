@@ -1,0 +1,45 @@
+.nav-bar {
+    width:  80%;
+    height: 120px;
+    margin: 20px auto;
+    background-color: #fcfcfc;
+    border-radius: 15px;
+    box-shadow: 0 1px 8px 0 rgb(32 33 36 / 28%);
+
+    & .nab-bar-element {
+        display: flex;
+
+        & ul {
+            list-style: none;
+        }
+    }
+}
+
+.window-controller {
+    display: block;
+    padding: 5px;
+    background-color:#ededed;
+    border-radius: 15px 15px 0px 0px;
+
+    & .window {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 1.46px solid lightgrey;
+        display: inline-block;
+        margin: 5px 2px;
+
+    }
+
+    & .window-close {
+        background-color: #d55934;
+    }
+
+    & .window-clminimizeose {
+        background-color: #f1c54a;
+    }
+
+    & .window-maximize {
+        background-color: #22b12d;
+    }
+}

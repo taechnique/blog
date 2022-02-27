@@ -1,3 +1,4 @@
+
 export default ({
     Vue, // VuePress 앱에서 사용되는 Vue 버전
     options, // 최상위 Vue 인스턴스 옵션
@@ -5,9 +6,5 @@ export default ({
     siteDate, //사이트 메타데이터
     isServer // 서버 랜더링 또는 클라이언트에 적용 추가사항
 }) => {
-    Vue,
-    options,
-    router,
-    siteDate,
-    isServer
+
 }
