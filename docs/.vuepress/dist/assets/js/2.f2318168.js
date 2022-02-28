@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{347:function(n,t,e){"use strict";e.r(t);var s=e(53),i=Object(s.a)({},(function(){var n=this.$createElement;return(this._self._c||n)("div",{staticClass:"inner-footer"},[this._v("\n    Footer\n")])}),[],!1,null,null,null);t.default=i.exports}}]);

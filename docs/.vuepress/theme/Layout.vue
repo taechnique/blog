@@ -1,15 +1,17 @@
 <template>
     <div class="theme-container">
-            <Header />
+        <Header />
         <div class="phantom-body">
             <Content />
         </div>
-            <Footer />
+        <Footer />
     </div>
 </template>
 
 <script>
-    export default{}
+export default {
+    
+}
 </script>
 
 

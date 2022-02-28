@@ -1,3 +1,4 @@
+import './styles/index.scss';
 
 export default ({
     Vue, // VuePress 앱에서 사용되는 Vue 버전
