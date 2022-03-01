@@ -2,7 +2,7 @@
     <div class="theme-container">
         <Header />
         <div class="phantom-body">
-            <Content />
+            <Content class="theme-default-content"/>
         </div>
         <Footer />
     </div>

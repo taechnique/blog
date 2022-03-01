@@ -20,6 +20,24 @@
                     <li>
                         <a href="#">Categories</a>
                     </li>
+                    <li>
+                        <span id="search-wrapper" class="search-box">
+                            <input class="search-input" type="search" placeholder="검색어 입력">
+                        </span>
+                    </li>
+                    <li>
+                        <div id="mode-wrapper" class="color-mode-box">
+                            <div class="switch-name">
+                                <div class="dark-mode-wrapper">
+                                    <input type="checkbox" name="dark-mode" id="dark-mode"  @change="switchDarkMode($event)">
+                                    <label for="dark-mode">dark mode</label>
+                                    <div class="switch" v-bind:class="{ active: isDark }" @click="clickSwitch($event)">
+                                        <div class="switch-button" v-bind:class="{ active: isDark }"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -28,5 +46,19 @@
 
 <script>
 export default {
+    data() {
+        return {
+            isDark: false
+        }
+    },
+    methods: {
+        switchDarkMode: function(e) {
+            this.isDark = e.target.checked
+            
+        },
+        clickSwitch: function(e) {
+            this.isDark = !this.isDark
+        }
+    }
 }
 </script>

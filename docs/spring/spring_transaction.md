@@ -18,16 +18,16 @@ layout: Layout
 ### 어노테이션 타입
 
 ```java
-@Target(value={TYPE,METHOD})
+@Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(value=RUNTIME)
 @Inherited
 @Documented
 public @interface Transactional
 ```
 
-개별 메소드 또는 클래스에 트랜잭션 속성을 표시하는 어노테이션 입니다.
-
-이 어노테이션이 클래스 레벨에 선언되면, 해당 서브클래스와 선언된 클래스의 모든 메서드는 기본적으로 적용됩니다. 이 어노테이션은 클래스 계층의 조상 클래스에는 적용되지 않습니다. 상속된 메소드는 서브클래스 어노테이션 안에서 참여하기 위해 지역적으로 재선언될 필요가 있습니다. 메소드의 가시성 제약에대한 자세한 사항은 수동 참조의 [Transaction Management](https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#transaction)를 참조하세요.
+개별 메소드 또는 클래스에 트랜잭션 속성을 표시하는 어노테이션 입니다.  
+  
+이 어노테이션이 클래스 레벨에 선언되면, 해당 서브클래스와 선언된 클래스의 모든 메서드는 기본적으로 적용됩니다. 이 어노테이션은 클래스 계층의 조상 클래스에는 적용되지 않습니다. 상속된 메소드는 서브클래스 어노테이션 안에서 참여하기 위해 지역적으로 재선언될 필요가 있습니다. 메소드의 가시성 제약에대한 자세한 사항은 수동 참조의 [Transaction Management](https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#transaction)를 참조하세요.  
 
 이 어노테이션 타입은 일반적으로 스프링의 [RuleBasedTransactionAttribute](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/interceptor/RuleBasedTransactionAttribute.html)클래스를 직접 비교할 수 있고, 실제로 [AnnotationTransactionAttributeSource](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/annotation/AnnotationTransactionAttributeSource.html)가 후자 클래스에 데이터를 바로 변환 하므로 스프링의 트랜잭션 지원 코드는 이 어노테이션에 대해 알 필요가 없어요. 사용자가 만든 롤백 룰이 적용되지 않는 다면, 트랜잭션은 예외를 체크하지 않지만, RuntimeException 과 Error에서 롤백 합니다. 어노테이션 속성 의미의 자세한 정보는
 [TransactionDefinition](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/TransactionDefinition.html)와 [TransactionAttribute](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/interceptor/TransactionAttribute.html)를 참조하세요.
