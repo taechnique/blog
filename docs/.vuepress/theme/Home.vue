@@ -2,15 +2,8 @@
     <div class="theme-container">
         <Header />
         <div class="phantom-body">
-            <Content class="theme-default-content"/>
+            <h1>Home</h1>
         </div>
         <Footer />
     </div>
 </template>
-
-<script>
-export default {
-}
-</script>
-
-

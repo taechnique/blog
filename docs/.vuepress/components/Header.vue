@@ -26,7 +26,7 @@
                         </span>
                     </li>
                     <li>
-                        <div id="mode-wrapper" class="color-mode-box">
+                        <div id="mode-wrapper" class="color-mode-box" @mouseover="isModeHover = true" @mouseout="isModeHover = false">
                             <div class="switch-name">
                                 <div class="dark-mode-wrapper">
                                     <input type="checkbox" name="dark-mode" id="dark-mode"  @change="switchDarkMode($event)">
@@ -35,6 +35,9 @@
                                         <div class="switch-button" v-bind:class="{ active: isDark }"></div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="comming-soon" :class="{ ment: isModeHover }">
+                                <span>준비 중..</span>
                             </div>
                         </div>
                     </li>
@@ -48,7 +51,8 @@
 export default {
     data() {
         return {
-            isDark: false
+            isDark: false,
+            isModeHover: false
         }
     },
     methods: {
