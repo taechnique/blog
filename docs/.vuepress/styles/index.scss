@@ -1,5 +1,10 @@
-/* variables */
+/* imports */
+@font-face {
+    font-family: 'AppleSDGothicNeoL';
+    src: url('/AppleSDGothicNeoL') format('ttf');
+}
 
+/* variables */
 $main-light-color: #fcfcfc;
 $point-light-color: #ededed;
 $linear-color: #eaecef;
