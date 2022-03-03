@@ -1,3 +1,3 @@
 module.exports = {
-    globalLayout: './GlobalLayout'
-  }
+    "main": "theme/Home.vue"
+}

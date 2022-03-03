@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@vuepress/plugin-register-components": "^1.9.7",
     "sass": "^1.49.9",
     "sass-loader": "7.3.1",
     "vuepress": "^1.9.7"
