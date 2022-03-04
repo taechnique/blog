@@ -21,8 +21,8 @@
                         <a href="#">Categories</a>
                     </li>
                     <li>
-                        <span id="search-wrapper" class="search-box">
-                            <input class="search-input" type="search" placeholder="검색어 입력">
+                        <span id="search-wrapper" class="search-box" v-bind:class="{ focus: isFocusOnSearchBox }">
+                            <input class="search-input" type="search" placeholder="검색어 입력" @focus="focusSearchBox($event)" @blur="blurSearchBox($event)">
                         </span>
                     </li>
                     <li>
@@ -52,7 +52,8 @@ export default {
     data() {
         return {
             isDark: false,
-            isModeHover: false
+            isModeHover: false,
+            isFocusOnSearchBox: false
         }
     },
     methods: {
@@ -62,6 +63,12 @@ export default {
         },
         clickSwitch: function(e) {
             this.isDark = !this.isDark
+        },
+        focusSearchBox: function(e) {
+            this.isFocusOnSearchBox = true
+        },
+        blurSearchBox: function(e) {
+            this.isFocusOnSearchBox = false
         }
     }
 }
